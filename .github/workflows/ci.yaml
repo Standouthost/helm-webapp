@@ -13,5 +13,5 @@ permissions:
   contents: read
 
 jobs:
-  docker-ci:
+  helm-ci:
     uses: Jmainguy/helm-workflows/.github/workflows/helm-ci.yml@v1
