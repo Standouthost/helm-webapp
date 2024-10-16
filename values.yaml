@@ -1,0 +1,20 @@
+replicaCount: 2
+
+image:
+  repository: hey.soh.re
+  tag: "v1.0.6"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8080
+
+virtualService:
+  hosts:
+    - "hey.soh.re"
+  gateway:
+    name: "http-gateway"
+    namespace: "istio-system"
+
+resources: {}

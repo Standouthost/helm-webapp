@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "hey-soh-re.fullname" . }}
+  labels:
+    app: {{ include "hey-soh-re.name" . }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ include "hey-soh-re.name" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "hey-soh-re.name" . }}
+    spec:
+      containers:
+        - name: {{ include "hey-soh-re.name" . }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: 8080
