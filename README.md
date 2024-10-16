@@ -11,6 +11,7 @@ A helm chart for a standard webapp using istio ingress
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"hey.soh.re"` |  |
 | image.tag | string | `"v1.0.6"` |  |
+| name | string | `"webapp"` |  |
 | replicaCount | int | `2` |  |
 | resources | object | `{}` |  |
 | service.port | int | `80` |  |

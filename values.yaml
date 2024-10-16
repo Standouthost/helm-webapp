@@ -18,3 +18,5 @@ virtualService:
     namespace: "istio-system"
 
 resources: {}
+
+name: webapp
