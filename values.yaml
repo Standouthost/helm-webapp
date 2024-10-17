@@ -21,3 +21,8 @@ virtualService:
 resources: {}
 
 name: webapp
+
+# New section for the external secret
+secret:
+  enabled: true
+  name: my-external-secret  # Name of the existing secret
