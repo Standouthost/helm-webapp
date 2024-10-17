@@ -1,7 +1,8 @@
 replicaCount: 2
 
 image:
-  repository: hey.soh.re
+  repository: zot.soh.re
+  name: hey.soh.re
   tag: "v1.0.6"
   pullPolicy: IfNotPresent
 
