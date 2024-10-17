@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/Standouthost/helm-webapp/compare/webapp-v1.0.2...webapp-v1.1.0) (2024-10-17)
+
+
+### Features
+
+* support secrets ([cd6b6bd](https://github.com/Standouthost/helm-webapp/commit/cd6b6bd9bb9cf4b8ef485ea36b2e7bdb29c58e1c))
+
 ## [1.0.2](https://github.com/Standouthost/helm-webapp/compare/webapp-v1.0.1...webapp-v1.0.2) (2024-10-17)
 
 
