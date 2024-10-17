@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/Standouthost/helm-webapp/compare/webapp-v1.0.1...webapp-v1.0.2) (2024-10-17)
+
+
+### Bug Fixes
+
+* repository and name ([536d041](https://github.com/Standouthost/helm-webapp/commit/536d0414b628124f5d9fef5e8cf3b6f9470e49ad))
+
 ## [1.0.1](https://github.com/Standouthost/helm-webapp/compare/webapp-v1.0.0...webapp-v1.0.1) (2024-10-16)
 
 
