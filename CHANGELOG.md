@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/Standouthost/helm-webapp/compare/webapp-v1.1.0...webapp-v1.1.1) (2024-10-17)
+
+
+### Bug Fixes
+
+* set default secret to not mount ([608f8f6](https://github.com/Standouthost/helm-webapp/commit/608f8f682853677340b79c22b9ef73a43c8ed8cd))
+
 ## [1.1.0](https://github.com/Standouthost/helm-webapp/compare/webapp-v1.0.2...webapp-v1.1.0) (2024-10-17)
 
 
