@@ -1,6 +1,6 @@
 # webapp
 
-![Version: 1.0.2](https://img.shields.io/badge/Version-1.0.2-informational?style=flat-square)
+![Version: 1.1.1](https://img.shields.io/badge/Version-1.1.1-informational?style=flat-square)
 
 A helm chart for a standard webapp using istio ingress
 
@@ -15,6 +15,8 @@ A helm chart for a standard webapp using istio ingress
 | name | string | `"webapp"` |  |
 | replicaCount | int | `2` |  |
 | resources | object | `{}` |  |
+| secret.enabled | bool | `false` |  |
+| secret.name | string | `"my-external-secret"` |  |
 | service.port | int | `80` |  |
 | service.targetPort | int | `8080` |  |
 | service.type | string | `"ClusterIP"` |  |
