@@ -26,3 +26,14 @@ name: webapp
 secret:
   enabled: false
   name: my-external-secret  # Name of the existing secret
+
+cluster:
+  enabled: false
+  name: postgres-cluster
+  instances: 2
+  storage:
+    size: 10Gi
+  bootstrap:
+    initdb:
+      database: app
+      owner: app
