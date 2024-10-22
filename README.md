@@ -8,6 +8,12 @@ A helm chart for a standard webapp using istio ingress
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
+| cluster.bootstrap.initdb.database | string | `"app"` |  |
+| cluster.bootstrap.initdb.owner | string | `"app"` |  |
+| cluster.enabled | bool | `false` |  |
+| cluster.instances | int | `2` |  |
+| cluster.name | string | `"postgres-cluster"` |  |
+| cluster.storage.size | string | `"10Gi"` |  |
 | image.name | string | `"hey.soh.re"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"zot.soh.re"` |  |
