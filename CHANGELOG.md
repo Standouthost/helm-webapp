@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/Standouthost/helm-webapp/compare/webapp-v1.1.1...webapp-v1.2.0) (2024-10-22)
+
+
+### Features
+
+* add postgres database feature ([58cf911](https://github.com/Standouthost/helm-webapp/commit/58cf9117c53bbded2d21e9fd318bf3763a6dc1be))
+
 ## [1.1.1](https://github.com/Standouthost/helm-webapp/compare/webapp-v1.1.0...webapp-v1.1.1) (2024-10-17)
 
 
