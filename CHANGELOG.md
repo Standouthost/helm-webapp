@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/Standouthost/helm-webapp/compare/webapp-v1.2.0...webapp-v2.0.0) (2024-10-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* add configmaps, change cluster to postgres
+
+### Features
+
+* add configmaps, change cluster to postgres ([55a29f2](https://github.com/Standouthost/helm-webapp/commit/55a29f246209693c24fa10c203d6eac3988f5fb8))
+
 ## [1.2.0](https://github.com/Standouthost/helm-webapp/compare/webapp-v1.1.1...webapp-v1.2.0) (2024-10-22)
 
 
