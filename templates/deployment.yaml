@@ -25,3 +25,20 @@ spec:
             - secretRef:
                 name: {{ .Values.secret.name }}
           {{- end }}
+
+          {{- if .Values.configMaps }}
+          volumeMounts:
+            {{- range .Values.configMaps }}
+            - name: {{ .name }}
+              mountPath: {{ .mountPath }}
+            {{- end }}
+          {{- end }}
+
+      {{- if .Values.configMaps }}
+      volumes:
+        {{- range .Values.configMaps }}
+        - name: {{ .name }}
+          configMap:
+            name: {{ .name }}
+        {{- end }}
+      {{- end }}

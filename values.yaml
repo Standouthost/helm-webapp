@@ -27,7 +27,7 @@ secret:
   enabled: false
   name: my-external-secret  # Name of the existing secret
 
-cluster:
+postgres:
   enabled: false
   name: postgres-cluster
   instances: 2
@@ -37,3 +37,16 @@ cluster:
     initdb:
       database: app
       owner: app
+
+# ConfigMap section - user can define which configmaps to mount
+configMaps: []
+  # - name: custom-configmap
+  #   mountPath: "/var/www/html"
+  #   data:
+  #     index.php: |
+  #       <?php
+  #       #$ip = getenv("REMOTE_ADDR");
+  #       $ip = getenv('HTTP_X_FORWARDED_FOR');
+  #       print 'Your IP is '.$ip.' Want to fight about it?';
+  #       echo "\n";
+  #       ?>

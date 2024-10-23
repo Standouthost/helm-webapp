@@ -1,6 +1,6 @@
 # webapp
 
-![Version: 1.1.1](https://img.shields.io/badge/Version-1.1.1-informational?style=flat-square)
+![Version: 1.2.0](https://img.shields.io/badge/Version-1.2.0-informational?style=flat-square)
 
 A helm chart for a standard webapp using istio ingress
 
@@ -8,17 +8,18 @@ A helm chart for a standard webapp using istio ingress
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| cluster.bootstrap.initdb.database | string | `"app"` |  |
-| cluster.bootstrap.initdb.owner | string | `"app"` |  |
-| cluster.enabled | bool | `false` |  |
-| cluster.instances | int | `2` |  |
-| cluster.name | string | `"postgres-cluster"` |  |
-| cluster.storage.size | string | `"10Gi"` |  |
+| configMaps | list | `[]` |  |
 | image.name | string | `"hey.soh.re"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"zot.soh.re"` |  |
 | image.tag | string | `"v1.0.6"` |  |
 | name | string | `"webapp"` |  |
+| postgres.bootstrap.initdb.database | string | `"app"` |  |
+| postgres.bootstrap.initdb.owner | string | `"app"` |  |
+| postgres.enabled | bool | `false` |  |
+| postgres.instances | int | `2` |  |
+| postgres.name | string | `"postgres-cluster"` |  |
+| postgres.storage.size | string | `"10Gi"` |  |
 | replicaCount | int | `2` |  |
 | resources | object | `{}` |  |
 | secret.enabled | bool | `false` |  |
