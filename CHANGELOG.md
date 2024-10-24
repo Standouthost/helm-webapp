@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/Standouthost/helm-webapp/compare/webapp-v2.1.0...webapp-v2.2.0) (2024-10-24)
+
+
+### Features
+
+* add pvc ([a8418c8](https://github.com/Standouthost/helm-webapp/commit/a8418c84cec17de175bc558e573da52fb2df61e6))
+
 ## [2.1.0](https://github.com/Standouthost/helm-webapp/compare/webapp-v2.0.0...webapp-v2.1.0) (2024-10-24)
 
 
