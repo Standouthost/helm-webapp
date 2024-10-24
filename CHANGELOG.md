@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/Standouthost/helm-webapp/compare/webapp-v2.0.0...webapp-v2.1.0) (2024-10-24)
+
+
+### Features
+
+* support arbitrary env variables ([2918597](https://github.com/Standouthost/helm-webapp/commit/29185975f196b8b44ae47bd08ce4253eafbc496d))
+
 ## [2.0.0](https://github.com/Standouthost/helm-webapp/compare/webapp-v1.2.0...webapp-v2.0.0) (2024-10-23)
 
 
