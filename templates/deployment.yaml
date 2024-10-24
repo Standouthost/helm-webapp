@@ -18,8 +18,6 @@ spec:
         - name: {{ .Values.name }}
           image: "{{ .Values.image.repository }}/{{ .Values.image.name }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          ports:
-            - containerPort: 8080
           {{- if .Values.secret.enabled }}
           envFrom:
             - secretRef:
@@ -42,6 +40,12 @@ spec:
             {{- end }}
           {{- end }}
 
+          {{- if .Values.pvc.enabled }}
+          volumeMounts:
+            - name: {{ .Values.name }}-pvc
+              mountPath: {{ .Values.pvc.mountPath }}
+          {{- end }}
+
       {{- if .Values.configMaps }}
       volumes:
         {{- range .Values.configMaps }}
@@ -49,4 +53,11 @@ spec:
           configMap:
             name: {{ .name }}
         {{- end }}
+      {{- end }}
+
+      {{- if .Values.pvc.enabled }}
+      volumes:
+        - name: {{ .Values.name }}-pvc
+          persistentVolumeClaim:
+            claimName: {{ .Values.name }}-pvc
       {{- end }}

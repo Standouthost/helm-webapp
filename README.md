@@ -21,6 +21,9 @@ A helm chart for a standard webapp using istio ingress
 | postgres.instances | int | `2` |  |
 | postgres.name | string | `"postgres-cluster"` |  |
 | postgres.storage.size | string | `"10Gi"` |  |
+| pvc.enabled | bool | `false` |  |
+| pvc.mountPath | string | `"/data"` |  |
+| pvc.size | string | `"1Gi"` |  |
 | replicaCount | int | `2` |  |
 | resources | object | `{}` |  |
 | secret.enabled | bool | `false` |  |

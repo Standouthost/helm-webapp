@@ -53,3 +53,7 @@ configMaps: []
 
 env: []
   #REPO_URL: jmainguy.com
+pvc:
+  enabled: false
+  size: 1Gi
+  mountPath: /data
