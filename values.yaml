@@ -50,3 +50,6 @@ configMaps: []
   #       print 'Your IP is '.$ip.' Want to fight about it?';
   #       echo "\n";
   #       ?>
+
+env: []
+  #REPO_URL: jmainguy.com

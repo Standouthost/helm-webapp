@@ -26,6 +26,14 @@ spec:
                 name: {{ .Values.secret.name }}
           {{- end }}
 
+          {{- if .Values.env }}
+          env:
+            {{- range $key, $value := .Values.env }}
+            - name: {{ $key }}
+              value: {{ $value | quote }}
+            {{- end }}
+          {{- end }}
+
           {{- if .Values.configMaps }}
           volumeMounts:
             {{- range .Values.configMaps }}

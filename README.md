@@ -9,6 +9,7 @@ A helm chart for a standard webapp using istio ingress
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | configMaps | list | `[]` |  |
+| env | list | `[]` |  |
 | image.name | string | `"hey.soh.re"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"zot.soh.re"` |  |
