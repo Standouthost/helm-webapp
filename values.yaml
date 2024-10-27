@@ -11,13 +11,6 @@ service:
   port: 80
   targetPort: 8080
 
-virtualService:
-  hosts:
-    - "hey.soh.re"
-  gateway:
-    name: "http-gateway"
-    namespace: "istio-system"
-
 resources: {}
 
 name: webapp
@@ -57,3 +50,9 @@ pvc:
   enabled: false
   size: 1Gi
   mountPath: /data
+
+virtualService:
+  hosts:
+    - "hey.soh.re"
+  #  - "www.hey.soh.re"
+  #redirectToPrimary: true    # Redirect www.HOSTNAME to HOSTNAME

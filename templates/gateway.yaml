@@ -1,0 +1,33 @@
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: namespace-gateway
+spec:
+  selector:
+    istio: ingressgateway  # Uses default Istio ingress gateway
+  servers:
+    # HTTPS server configuration
+    - port:
+        number: 443
+        name: https
+        protocol: HTTPS
+      tls:
+        mode: SIMPLE
+        credentialName: {{ .Values.name }}-tls  # TLS secret from Certificate
+      hosts:
+{{- range .Values.virtualService.hosts }}
+        - {{ . }}
+{{- end }}
+
+    # HTTP server configuration for redirecting to HTTPS
+    - port:
+        number: 80
+        name: http
+        protocol: HTTP
+      hosts:
+{{- range .Values.virtualService.hosts }}
+        - {{ . }}
+{{- end }}
+      # Redirect all HTTP traffic to HTTPS
+      tls:
+        httpsRedirect: true
