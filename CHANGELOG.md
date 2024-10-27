@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/Standouthost/helm-webapp/compare/webapp-v2.2.0...webapp-v2.3.0) (2024-10-27)
+
+
+### Features
+
+* support tls certs and www redirect ([e46ca22](https://github.com/Standouthost/helm-webapp/commit/e46ca22ab1dfd4a4874542abda386e9215f0234b))
+
 ## [2.2.0](https://github.com/Standouthost/helm-webapp/compare/webapp-v2.1.0...webapp-v2.2.0) (2024-10-24)
 
 
