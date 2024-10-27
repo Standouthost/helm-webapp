@@ -1,7 +1,8 @@
 apiVersion: networking.istio.io/v1beta1
 kind: Gateway
 metadata:
-  name: namespace-gateway
+  name: {{ .Release.Namespace }}-gateway
+  namespace: istio-system
 spec:
   selector:
     istio: ingressgateway  # Uses default Istio ingress gateway
@@ -13,7 +14,7 @@ spec:
         protocol: HTTPS
       tls:
         mode: SIMPLE
-        credentialName: {{ .Values.name }}-tls  # TLS secret from Certificate
+        credentialName: {{ .Release.Namespace }}-tls  # TLS secret from Certificate
       hosts:
 {{- range .Values.virtualService.hosts }}
         - {{ . }}
@@ -30,5 +31,4 @@ spec:
 {{- end }}
       # Redirect all HTTP traffic to HTTPS
       tls:
-        httpsRedirect: false # if set to true, it breaks cert-manager. https://gruchalski.com/posts/2023-07-09-istio-cert-manager-lets-encrypt-and-https-redirect/#fixing-the-problem
- 
+        httpsRedirect: false # https://gruchalski.com/posts/2023-07-09-istio-cert-manager-lets-encrypt-and-https-redirect/

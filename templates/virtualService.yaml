@@ -8,7 +8,7 @@ spec:
     - {{ . }}
 {{- end }}
   gateways:
-    - namespace-gateway
+    - "istio-system/{{ .Release.Namespace }}-gateway"
   http:
 {{- if .Values.virtualService.redirectToPrimary }}
     - match:
@@ -29,6 +29,6 @@ spec:
         redirectCode: 302
     - route:
         - destination:
-            host: {{ .Values.name }}
+            host: {{ .Values.service.name }}
             port:
-              number: {{ .Values.service.targetPort }}
+              number: {{ .Values.service.port }}
