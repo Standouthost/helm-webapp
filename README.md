@@ -1,6 +1,6 @@
 # webapp
 
-![Version: 2.0.0](https://img.shields.io/badge/Version-2.0.0-informational?style=flat-square)
+![Version: 2.3.0](https://img.shields.io/badge/Version-2.3.0-informational?style=flat-square)
 
 A helm chart for a standard webapp using istio ingress
 
@@ -31,7 +31,5 @@ A helm chart for a standard webapp using istio ingress
 | service.port | int | `80` |  |
 | service.targetPort | int | `8080` |  |
 | service.type | string | `"ClusterIP"` |  |
-| virtualService.gateway.name | string | `"http-gateway"` |  |
-| virtualService.gateway.namespace | string | `"istio-system"` |  |
 | virtualService.hosts[0] | string | `"hey.soh.re"` |  |
 
