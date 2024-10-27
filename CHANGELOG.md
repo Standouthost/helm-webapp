@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.1](https://github.com/Standouthost/helm-webapp/compare/webapp-v2.3.0...webapp-v2.3.1) (2024-10-27)
+
+
+### Bug Fixes
+
+* redirect at vs level ([991088a](https://github.com/Standouthost/helm-webapp/commit/991088a3300a7588797bde7a20ba3e6236d1cc4a))
+
 ## [2.3.0](https://github.com/Standouthost/helm-webapp/compare/webapp-v2.2.0...webapp-v2.3.0) (2024-10-27)
 
 
