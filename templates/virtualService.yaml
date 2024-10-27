@@ -19,6 +19,14 @@ spec:
       redirect:
         authority: "{{ .Values.virtualService.hosts | first }}"
 {{- end }}
+    - match:
+      - uri:
+          prefix: /
+        scheme:
+          exact: http
+      redirect:
+        scheme: https
+        redirectCode: 302
     - route:
         - destination:
             host: {{ .Values.name }}

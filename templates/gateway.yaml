@@ -30,4 +30,5 @@ spec:
 {{- end }}
       # Redirect all HTTP traffic to HTTPS
       tls:
-        httpsRedirect: true
+        httpsRedirect: false # if set to true, it breaks cert-manager. https://gruchalski.com/posts/2023-07-09-istio-cert-manager-lets-encrypt-and-https-redirect/#fixing-the-problem
+ 
