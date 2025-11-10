@@ -34,3 +34,4 @@ A helm chart for a standard webapp using istio ingress
 | service.type | string | `"ClusterIP"` |  |
 | virtualService.hosts[0] | string | `"hey.soh.re"` |  |
 
+
