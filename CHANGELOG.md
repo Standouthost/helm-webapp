@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://github.com/Standouthost/helm-webapp/compare/webapp-v2.3.2...webapp-v2.4.0) (2025-11-10)
+
+
+### Features
+
+* trigger release because zot deleted everything ([2aae02b](https://github.com/Standouthost/helm-webapp/commit/2aae02bd60fc04aeeb754aefb1d682c1912678d2))
+
 ## [2.3.2](https://github.com/Standouthost/helm-webapp/compare/webapp-v2.3.1...webapp-v2.3.2) (2024-10-27)
 
 
