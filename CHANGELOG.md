@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/Standouthost/helm-webapp/compare/webapp-v2.4.0...webapp-v3.0.0) (2026-02-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* BREAKING CHANGE updated pvc to persistence
+
+### Features
+
+* BREAKING CHANGE updated pvc to persistence ([15adf67](https://github.com/Standouthost/helm-webapp/commit/15adf67ca90ddf740b188631321130cfc8049ab5))
+
 ## [2.4.0](https://github.com/Standouthost/helm-webapp/compare/webapp-v2.3.2...webapp-v2.4.0) (2025-11-10)
 
 
