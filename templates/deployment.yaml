@@ -32,32 +32,28 @@ spec:
             {{- end }}
           {{- end }}
 
-          {{- if .Values.configMaps }}
+          {{- if or .Values.configMaps .Values.persistence }}
           volumeMounts:
             {{- range .Values.configMaps }}
             - name: {{ .name }}
               mountPath: {{ .mountPath }}
             {{- end }}
+            {{- range .Values.persistence }}
+            - name: {{ .name }}
+              mountPath: {{ .mountPath }}
+            {{- end }}
           {{- end }}
 
-          {{- if .Values.pvc.enabled }}
-          volumeMounts:
-            - name: {{ .Values.name }}-pvc
-              mountPath: {{ .Values.pvc.mountPath }}
-          {{- end }}
-
-      {{- if .Values.configMaps }}
+      {{- if or .Values.configMaps .Values.persistence }}
       volumes:
         {{- range .Values.configMaps }}
         - name: {{ .name }}
           configMap:
             name: {{ .name }}
         {{- end }}
-      {{- end }}
-
-      {{- if .Values.pvc.enabled }}
-      volumes:
-        - name: {{ .Values.name }}-pvc
+        {{- range .Values.persistence }}
+        - name: {{ .name }}
           persistentVolumeClaim:
-            claimName: {{ .Values.name }}-pvc
+            claimName: {{ if .existingClaim }}{{ .existingClaim }}{{ else }}{{ $.Values.name }}-{{ .name }}-pvc{{ end }}
+        {{- end }}
       {{- end }}

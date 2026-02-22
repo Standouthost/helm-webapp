@@ -47,10 +47,13 @@ configMaps: []
 
 env: []
   #REPO_URL: jmainguy.com
-pvc:
-  enabled: false
-  size: 1Gi
-  mountPath: /data
+# Persistence: list of volumes to mount. Each item can create a new PVC or use an existing one.
+persistence: []
+  # - name: data                    # Volume name (used as volume mount name)
+  #   mountPath: /data              # Where to mount in the container
+  #   size: 1Gi                     # Size when creating a new PVC (omit if using existingClaim)
+  #   existingClaim: ""             # Optional: name of existing PVC to use (do not create one)
+  #   volumeName: ""                # Optional: when creating PVC, bind to this existing PV by name
 
 virtualService:
   hosts:

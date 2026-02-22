@@ -21,9 +21,7 @@ A helm chart for a standard webapp using istio ingress
 | postgres.instances | int | `2` |  |
 | postgres.name | string | `"postgres-cluster"` |  |
 | postgres.storage.size | string | `"10Gi"` |  |
-| pvc.enabled | bool | `false` |  |
-| pvc.mountPath | string | `"/data"` |  |
-| pvc.size | string | `"1Gi"` |  |
+| persistence | list | `[]` | List of persistence volumes. Each item: `name`, `mountPath`, and optionally `size` (new PVC), `existingClaim` (reuse PVC), `volumeName` (bind new PVC to existing PV). |
 | replicaCount | int | `2` |  |
 | resources | object | `{}` |  |
 | secret.enabled | bool | `false` |  |
@@ -34,4 +32,27 @@ A helm chart for a standard webapp using istio ingress
 | service.type | string | `"ClusterIP"` |  |
 | virtualService.hosts[0] | string | `"hey.soh.re"` |  |
 
+### Persistence
+
+You can define multiple persistence volumes. For each item:
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| name | yes | Volume name (used as the Kubernetes volume name). |
+| mountPath | yes | Path where the volume is mounted in the container. |
+| size | no | Size for a new PVC (e.g. `"1Gi"`). Omit when using `existingClaim`. |
+| existingClaim | no | Name of an existing PVC to use; no new PVC is created. |
+| volumeName | no | When creating a new PVC, bind it to this existing PersistentVolume by name. |
+
+Example: create one new PVC and reuse an existing one:
+
+```yaml
+persistence:
+  - name: data
+    mountPath: /data
+    size: 1Gi
+  - name: cache
+    mountPath: /cache
+    existingClaim: my-existing-cache-pvc
+```
 
