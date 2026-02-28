@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.0](https://github.com/Standouthost/helm-webapp/compare/webapp-v3.0.0...webapp-v3.1.0) (2026-02-28)
+
+
+### Features
+
+* support readWriteMany for pvc ([8baebb6](https://github.com/Standouthost/helm-webapp/commit/8baebb61d969dae5a8203207a87230cce57df39f))
+
 ## [3.0.0](https://github.com/Standouthost/helm-webapp/compare/webapp-v2.4.0...webapp-v3.0.0) (2026-02-22)
 
 
