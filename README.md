@@ -1,6 +1,6 @@
 # helm-webapp
 
-![Version: 4.2.4](https://img.shields.io/badge/Version-4.2.4-informational?style=flat-square)
+![Version: 4.3.0](https://img.shields.io/badge/Version-4.3.0-informational?style=flat-square)
 
 A helm chart for a standard webapp using istio ingress
 
