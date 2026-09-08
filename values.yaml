@@ -64,6 +64,14 @@ configMaps: []
 
 env: {}
   #REPO_URL: jmainguy.com
+
+# Environment variables sourced from individual keys in existing Secrets.
+secretEnv: {}
+  # DATABASE_URL:
+  #   name: postgres-cluster-app
+  #   key: uri
+  #   optional: false
+
 # Persistence: list of volumes to mount. Each item can create a new PVC or use an existing one.
 persistence: []
   # - name: data                    # Volume name (used as volume mount name)

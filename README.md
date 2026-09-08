@@ -38,6 +38,7 @@ A helm chart for a standard webapp using istio ingress
 | resources | object | `{}` |  |
 | secret.enabled | bool | `false` |  |
 | secret.name | string | `"my-external-secret"` |  |
+| secretEnv | object | `{}` |  |
 | service.name | string | `"hey-soh-re"` |  |
 | service.port | int | `80` |  |
 | service.targetPort | int | `8080` |  |

@@ -24,7 +24,7 @@ spec:
                 name: {{ .Values.secret.name }}
           {{- end }}
 
-          {{- if or .Values.env (and .Values.redis.enabled .Values.redis.injectEnv) }}
+          {{- if or .Values.env .Values.secretEnv (and .Values.redis.enabled .Values.redis.injectEnv) }}
           env:
             {{- if and .Values.redis.enabled .Values.redis.injectEnv }}
             - name: REDIS_URL
@@ -33,6 +33,14 @@ spec:
             {{- range $key, $value := .Values.env }}
             - name: {{ $key }}
               value: {{ $value | quote }}
+            {{- end }}
+            {{- range $key, $value := .Values.secretEnv }}
+            - name: {{ $key }}
+              valueFrom:
+                secretKeyRef:
+                  name: {{ $value.name }}
+                  key: {{ $value.key }}
+                  optional: {{ default false $value.optional }}
             {{- end }}
           {{- end }}
 
