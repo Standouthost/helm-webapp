@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.3.0](https://github.com/Jmainguy/helm-webapp/compare/helm-webapp-v4.2.4...helm-webapp-v4.3.0) (2026-09-08)
+
+
+### Features
+
+* support environment variables from secret keys ([7cc79bb](https://github.com/Jmainguy/helm-webapp/commit/7cc79bb7780f0b9d8611dac365d31499fa62b311))
+
 ## [4.2.4](https://github.com/Jmainguy/helm-webapp/compare/helm-webapp-v4.2.3...helm-webapp-v4.2.4) (2026-08-23)
 
 
